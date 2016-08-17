@@ -12,10 +12,10 @@ class ViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		let img = UIImage.ss_combinedShape
-		let imgV = UIImageView(frame: CGRectMake(100, 100, 50, 50))
-		imgV.image = img
-		view.addSubview(imgV)
+//		let img = UIImage.luoo_combinedShape
+//		let imgV = UIImageView(frame: CGRectMake(100, 100, 50, 50))
+//		imgV.image = img
+//		view.addSubview(imgV)
 		// Do any additional setup after loading the view, typically from a nib.
 	}
 

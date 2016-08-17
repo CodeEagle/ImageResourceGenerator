@@ -22,6 +22,12 @@ static var xxx_bubbleRightTail: UIImage {
 
 
 
+⚠️Warning
+===
+Assets 的子目录名不能有空格，否则解析不能(待解决)
+
+Source
+===
 `Demo`项目里面包含了`Script`的源码
 
 源码在此[gist](https://gist.github.com/CodeEagle/44e4e379e7b93ee08afc76e30c719c25)
@@ -80,12 +86,14 @@ DealWithFile() {
 ImageResourceGenerator() {
   for entry in $1/*
   do
+    echo "entry: $entry"
     if [[ -d $entry ]]
     then
       IFS='/' read -r -a components <<< "$entry"
       LENGTH=${#components[@]} # Get the length.
       LAST_POSITION=$((LENGTH - 1)) # Subtract 1 from the length.
       lastComponent=${components[${LAST_POSITION}]}
+      echo "lastComponent: $lastComponent"
       if [[ $lastComponent == *"."* ]]
       then
         echo "deal file $entry"
